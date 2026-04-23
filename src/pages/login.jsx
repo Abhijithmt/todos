@@ -34,14 +34,14 @@ import { useState } from "react";
       <input
         placeholder="Username"
         onChange={(e) => setUsername(e.target.value)}
-        className="border px-3 py-2 rounded"
+        className="border px-3 py-2 rounded font-mono"
       />
 
       <input
         type="password"
         placeholder="Password"
         onChange={(e) => setPassword(e.target.value)}
-        className="border px-3 py-2 rounded"
+        className="border px-3 py-2 rounded font-mono"
       />
 
       <button
