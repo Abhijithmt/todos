@@ -13,7 +13,9 @@ function App() {
       <Route path="/tasks" element={<Tasks/>}/>
       <Route  path={"/tasks/:id"} element={<TaskDetails/>}/>
     </Routes>
+    {/* <Tasks/> */}
     </BrowserRouter>
+    
    
   )
 }

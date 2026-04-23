@@ -8,22 +8,27 @@ function Tasks() {
     fetch("https://jsonplaceholder.typicode.com/todos")
       .then((res) => res.json())
       .then((data) => {
-        setTasks(data.slice(0, 20)); // show 20 items
+        setTasks(data.slice(0, 20));
       });
   }, []);
 
   return (
-    <div>
-      <h2>Tasks</h2>
-      <ul>
+    <div className="px-5">
+      <div>
+      <h2 className="text-center text-3xl font font-extrabold">Tasks</h2>
+      </div>
+      <div className="text-center ">
+      <ul className=" text-left flex flex-col gap-2">
         {tasks.map((task) => (
-          <li key={task.id}>
+          <li className="hover:underline" key={task.id }>
+            <span className="text-green-500">✔</span>
             <Link to={`/tasks/${task.id}`}>
               {task.title}
             </Link>
           </li>
         ))}
       </ul>
+      </div>
     </div>
   );
 }
